@@ -1,6 +1,8 @@
-import '@axa-fr/react-toolkit-layout-footer/dist/footer.scss';
+
 import { Footer } from '@axa-fr/react-toolkit-layout-footer';
 import logo from './slash-logo.svg';
+
+import '@axa-fr/react-toolkit-layout-footer/dist/footer.scss';
 
 function FooterComponent() {
   return (
