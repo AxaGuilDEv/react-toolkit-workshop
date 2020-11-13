@@ -13,27 +13,38 @@ import Button from '@axa-fr/react-toolkit-button';
 import '@axa-fr/react-toolkit-button/dist/button.scss';
 
 const initialState = {
-  name: {value: ''},
-  agree: { values: [] }
+  name: {value: '', message:''},
+  agree: { values: [] },
+  submit: {disabled: true}
 }
 
 function App() {
 
   const [state, setState] = useState(initialState)
   const options = [
-    { label: 'Yes', value: '1', disabled: false, id: 'uniqueId1' },
+    { label: 'Yes', value: '1' },
   ];
 
   const onChange= (e) =>{
     switch(e.name){
       case "name":
-        setState({...state, name:{value: e.value}})
+        let message = ""
+        let submit = {disabled:false};
+        if(!e.value){
+          message= "Name is required"
+          submit = {disabled:true};
+        } 
+        setState({...state, name:{value: e.value, message}, submit})
+        break;
       case "agree":
         setState({...state, agree:{values: e.values}})
+        break;
       default:
         break;
     }
   }
+
+  console.log(state)
 
   return (<>
     <Header />
@@ -45,19 +56,22 @@ function App() {
           <h1 className="af-title--content">My Form</h1>
             <TextInput
               label='Name'
+              id='name'
               name='name'
               onChange={onChange}
               value={state.name.value}
+              message={state.name.message}
               helpMessage='Enter a name'
              />
              <CheckboxInput
               label="Are you agree"
+              id='agree'
               name="agree"
               options={options}
               values={state.agree.values}
               onChange={onChange}
             />
-            <Button id="id" onClick={()=>{}}>
+            <Button id="id" onClick={()=>{}} disabled={state.submit.disabled} classModifier={state.submit.disabled ? "disabled": ""}>
               <span className="af-btn__text">Send</span>
             </Button>
         </form>
