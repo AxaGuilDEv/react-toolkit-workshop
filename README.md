@@ -1,2 +1,4 @@
 # react-toolkit-workshop
-react toolkit workshop for beginner
+
+React toolkit workshop for beginner.
+Download the power point and get stared !
