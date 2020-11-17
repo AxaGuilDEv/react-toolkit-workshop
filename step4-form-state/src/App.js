@@ -49,9 +49,9 @@ function App() {
   return (<>
     <Header />
     <Title />
-    <div className="af-container">
+    <div className="container">
     <div className="row">
-      <div className="col col-sm-12 col-md-12 col-lg-8 col-xl-8">
+      <div className="col col-sm-12">
         <form className="af-form">
           <h1 className="af-title--content">My Form</h1>
             <TextInput
@@ -70,8 +70,9 @@ function App() {
               options={options}
               values={state.agree.values}
               onChange={onChange}
+              mode="classic"
             />
-            <Button id="id" onClick={()=>{}} disabled={state.submit.disabled} classModifier={state.submit.disabled ? "disabled": ""}>
+            <Button className="offset-md-2 btn af-btn" id="id" onClick={()=>{}} disabled={state.submit.disabled} classModifier={state.submit.disabled ? "disabled": ""}>
               <span className="af-btn__text">Send</span>
             </Button>
         </form>

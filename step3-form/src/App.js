@@ -19,11 +19,11 @@ function App() {
   return (<>
     <Header />
     <Title />
-    <div className="af-container">
-    <div className="row">
-      <div className="col col-sm-12 col-md-12 col-lg-8 col-xl-8">
-        <form className="af-form">
-          <h1 className="af-title--content">My Form</h1>
+    <div className="container">
+      <div className="row">
+        <div className="col col-sm-12">
+          <form className="af-form">
+            <h1 className="af-title--content">My Form</h1>
             <TextInput
               label='Name'
               name='name'
@@ -34,14 +34,15 @@ function App() {
              <CheckboxInput
               label="Place type"
               name="Place type"
+              mode="classic"
               options={options}
               values={[]}
               onChange={()=>{}}
             />
-            <Button id="id" onClick={()=>{}}>
+            <Button className="offset-md-2 btn af-btn" id="id" onClick={()=>{}}>
               <span className="af-btn__text">Send</span>
             </Button>
-        </form>
+          </form>
         </div>
       </div>
     </div>

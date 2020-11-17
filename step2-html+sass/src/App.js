@@ -7,7 +7,7 @@ function App() {
   return (<>
     <Header />
     <Title />
-    <div class="af-container"></div>
+    <div class="container"></div>
     <Footer />
 </>
   );
