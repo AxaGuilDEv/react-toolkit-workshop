@@ -9,7 +9,7 @@ import '@axa-fr/react-toolkit-layout-header/dist/Logo/logo.scss';
 function Header() {
   return (
     <div className="af-header">
-    <div className="af-container af-header__wrapper">
+    <div className="container af-header__wrapper">
         <header className="af-header__content" role="banner">
             <div className="af-header__name"><a className="af-logo" href="/"><img className="af-logo__brand" src={logo} alt="Logo Slash Design System" /></a>
                 <h2 className="af-header__title">Nom de l&apos;application<small className="af-header__subtitle">Baseline</small></h2>
