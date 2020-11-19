@@ -12,6 +12,8 @@ import '@axa-fr/react-toolkit-form-input-checkbox/dist/checkbox.scss';
 import Button from '@axa-fr/react-toolkit-button';
 import '@axa-fr/react-toolkit-button/dist/button.scss';
 
+import '@axa-fr/react-toolkit-form-core/dist/form.scss';
+
 function App() {
   const options = [
     { label: 'Are you agree', value: '1', disabled: false, id: 'uniqueId1' },

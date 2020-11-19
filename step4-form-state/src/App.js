@@ -12,6 +12,8 @@ import '@axa-fr/react-toolkit-form-input-checkbox/dist/checkbox.scss';
 import Button from '@axa-fr/react-toolkit-button';
 import '@axa-fr/react-toolkit-button/dist/button.scss';
 
+import '@axa-fr/react-toolkit-form-core/dist/form.scss';
+
 const initialState = {
   name: {value: '', message:''},
   agree: { values: [] },
@@ -43,8 +45,6 @@ function App() {
         break;
     }
   }
-
-  console.log(state)
 
   return (<>
     <Header />
